@@ -1,6 +1,6 @@
 {% set name = "mapkit" %}
-{% set version = "1.2.2" %}
-{% set sha256 = "753558889722b1d6f190525a01641782381963dc382ceccbdeb18fa1a9f71856" %}
+{% set version = "1.2.3" %}
+{% set sha256 = "edd5282f37eff0db0d5aa684c25d0a9e7809a45fe3a17f02adfd8043cb4afed2" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
