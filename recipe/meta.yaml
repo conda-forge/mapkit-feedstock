@@ -17,11 +17,6 @@ build:
   script: ${PYTHON} -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
-    - python
-    - pip
-    - requests
-    - sqlalchemy
   host:
     - pip
     - python
