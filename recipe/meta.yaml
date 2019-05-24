@@ -13,18 +13,18 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: ${PYTHON} -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   host:
     - pip
-    - python {{ python }}
+    - python
     - requests
     - sqlalchemy
     - setuptools
   run:
-    - python {{ python }}
+    - python
     - requests
     - sqlalchemy
 
