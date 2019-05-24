@@ -1,6 +1,6 @@
 {% set name = "mapkit" %}
-{% set version = "1.2.4" %}
-{% set sha256 = "c202df59ff90eab90d0eb9e2068f8f9382e5edf6d6b89cc40ecb37dbb3a78371" %}
+{% set version = "1.2.5" %}
+{% set sha256 = "24d495fa80a3910a6f6965bd7fef90fd3f3be5df428ccb74f5ee46a9fa218c9a %}
 
 package:
   name: {{ name|lower }}
