@@ -1,6 +1,6 @@
 {% set name = "mapkit" %}
-{% set version = "1.2.5" %}
-{% set sha256 = "24d495fa80a3910a6f6965bd7fef90fd3f3be5df428ccb74f5ee46a9fa218c9a" %}
+{% set version = "1.2.6" %}
+{% set sha256 = "10cbca94230dcf940c27047f161c5628b19533c338ed610f07a064ec68358541" %}
 
 package:
   name: {{ name|lower }}
@@ -17,16 +17,11 @@ build:
   script: ${PYTHON} -m pip install --no-deps --ignore-installed .
 
 requirements:
-  build:
-    - pip
-    - python {{ python }}
-    - requests
-    - sqlalchemy
-    - setuptools
   host:
     - pip
     - python {{ python }}
     - requests
+    - sqlalchemy
     - setuptools
   run:
     - python {{ python }}
