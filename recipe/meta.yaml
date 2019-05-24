@@ -18,6 +18,7 @@ build:
 
 requirements:
   build:
+    - pip
     - requests
     - sqlalchemy
   host:
