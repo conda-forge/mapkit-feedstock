@@ -19,15 +19,17 @@ build:
 requirements:
   build:
     - pip
+    - python {{ python }}
     - requests
     - sqlalchemy
     - setuptools
   host:
     - pip
-    - python
+    - python {{ python }}
+    - requests
     - setuptools
   run:
-    - python
+    - python {{ python }}
     - requests
     - sqlalchemy
 
