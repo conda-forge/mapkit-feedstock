@@ -8,27 +8,29 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 2
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
     - requests
     - sqlalchemy
     - setuptools
   run:
-    - python
+    - python >={{ python_min }}
     - requests
     - sqlalchemy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - mapkit
     - mapkit.RasterConverter
@@ -40,6 +42,7 @@ about:
   home: https://github.com/CI-WATER/mapkit
   license: BSD-2-Clause
   license_family: BSD
+  license_file: LICENSE.txt
   summary: 'A Python module with mapping functions for PostGIS enabled PostgreSQL databases.'
   description: |
     MapKit is a Python module with mapping functions for PostGIS enabled
